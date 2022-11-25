@@ -349,6 +349,7 @@ void TParseContext::handleLoopAttributes(const TAttributes& attributes, TIntermN
 //
 void TParseContext::handleFunctionAttributes(const TSourceLoc& loc, const TAttributes& attributes, TFunction* function)
 {
+    (void)function; //unuse
     for (auto it = attributes.begin(); it != attributes.end(); ++it) {
         if (it->size() > 0) {
             warn(loc, "attribute with arguments not recognized, skipping", "", "");

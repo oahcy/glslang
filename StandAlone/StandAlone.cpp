@@ -1426,6 +1426,9 @@ void CompileAndLinkShaderUnits(std::vector<ShaderCompUnit> compUnits)
 //
 void CompileAndLinkShaderFiles(glslang::TWorklist& Worklist)
 {
+    Worklist;
+    assert(false);
+    /*
     std::vector<ShaderCompUnit> compUnits;
 
     // If this is using stdin, we can't really detect multiple different file
@@ -1471,6 +1474,7 @@ void CompileAndLinkShaderFiles(glslang::TWorklist& Worklist)
     // as the first string above
     for (auto it = compUnits.begin(); it != compUnits.end(); ++it)
         FreeFileData(const_cast<char*>(it->text[0]));
+        */
 }
 
 int singleMain()
@@ -1686,6 +1690,10 @@ EShLanguage FindLanguage(const std::string& name, bool parseStageName)
 //
 void CompileFile(const char* fileName, ShHandle compiler)
 {
+    fileName;//nouse
+    compiler;//nouse
+    assert(false);
+    /*
     int ret = 0;
     char* shaderString;
     if ((Options & EOptionStdin) != 0) {
@@ -1726,6 +1734,7 @@ void CompileFile(const char* fileName, ShHandle compiler)
 
     if (ret == 0)
         CompileFailed = true;
+    */
 }
 
 //
