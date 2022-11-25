@@ -31,14 +31,7 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-if(WIN32)
-    add_subdirectory(OSDependent/Windows)
-elseif(UNIX OR "${CMAKE_SYSTEM_NAME}" STREQUAL "Fuchsia")
     add_subdirectory(OSDependent/Unix)
-else(WIN32)
-    message("unknown platform")
-endif(WIN32)
-
 if(EMSCRIPTEN OR ENABLE_GLSLANG_JS)
     # May be enabled on non-Emscripten builds for binary-size testing.
     add_subdirectory(OSDependent/Web)
